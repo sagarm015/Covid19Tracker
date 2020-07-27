@@ -1,0 +1,50 @@
+
+body{
+  background-color: #e8e4e1;
+}
+.top{
+  text-align:left;
+  padding: 20px;
+}
+.title{
+  color:#1f4068;
+  text-align: center;
+}
+.keys{
+  font-weight: bolder;
+}
+.keycase{
+  color:#cf1b1b;
+}
+.keydeath{
+  color:#1b262c;
+}
+.keyrecover{
+  color:#438a5e;
+}
+.col{
+  border-bottom:2px solid white;
+  padding-top: 4px;
+}
+
+h5{
+  font-size: 14.3px;
+}
+h6{
+  font-size: 11px;
+}
+.deltaC{
+  font-size:9px;
+  color:red;
+  font-weight: bolder;
+}
+.deltaR{
+  font-size:9px;
+  color:green;
+  font-weight: bolder;
+}
+.deltaD{
+  font-size:9px;
+  color:grey;
+  font-weight: bolder;
+}

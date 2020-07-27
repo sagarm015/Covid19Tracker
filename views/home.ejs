@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid 19 India</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="top">
+    <h1 class="title">Coronavirus Outbreak In India</h1>
+    <h3 class="subhead">Total</h3>
+    <div class="keys">
+      <p class="keycase">Confirmed    : <%= result.statewise[0].confirmed %> (+<%= result.statewise[0].deltaconfirmed %>)</p>
+      <p class="keydeath">Deceased    : <%= result.statewise[0].deaths %> (+<%= result.statewise[0].deltadeaths %>) </p>
+      <p class="keyrecover">Recovered : <%= result.statewise[0].recovered %> (+<%= result.statewise[0].deltarecovered %> )</p>
+
+    </div>
+    <h3 class="subhead">Statewise Statistics</h3>
+    <div class="row">
+      <div class="col">
+        <h5>State</h5>
+      </div>
+      <div class="col">
+        <h5>Confirmed</h5>
+      </div>
+      <div class="col">
+        <h5>Recovered</h5>
+      </div>
+      <div class="col">
+        <h5>Active</h5>
+      </div>
+      <div class="col">
+        <h5>Deaths</h5>
+      </div>
+    </div>
+    <% result.statewise.forEach(function(element){ %>
+      <div class="row">
+        <div class="col">
+          <h6><%= element.state %></h6>
+        </div>
+        <div class="col">
+          <h6><%= element.confirmed %></h6>
+          <p class="deltaC"> + <%= element.deltaconfirmed  %></p>
+        </div>
+        <div class="col">
+          <h6><%= element.recovered %></h6>
+            <p class="deltaR"> + <%= element.deltarecovered  %></p>
+        </div>
+        <div class="col">
+          <h6><%= element.active %></h6>
+        </div>
+        <div class="col">
+          <h6><%= element.deaths %></h6>
+            <p class="deltaD"> + <%= element.deltadeaths  %></p>
+        </div>
+
+      </div>
+    <%  }); %>
+</div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col">
+    <h5 class="rowhead">STATE/UT</h5>
+    <% result.statewise.forEach(function(element){ %>
+      <p class="state"> <%= element.state %> </p>
+      <br>
+      <br>
+  <%  }); %>
+  </div>
+
+  <div class="col">
+    <h5 class="rowhead">Confirmed</h5>
+    <% result.statewise.forEach(function(element){ %>
+      <p class="state">  <%= element.confirmed %> </p>
+      <p class="delta">(+ <%= element.deltaconfirmed %> )</p>
+      <br>
+  <%  }); %>
+  </div>
+  <div class="col">
+    <h5 class="rowhead">Recovered</h5>
+    <% result.statewise.forEach(function(element){ %>
+      <p class="state"> <%= element.recovered %>  </p>
+      <p class="deltare">(+ <%= element.deltarecovered %> )</p>
+      <br>
+  <%  }); %>
+  </div>
+  <div class="col">
+    <h5 class="rowhead">Active</h5>
+    <% result.statewise.forEach(function(element){ %>
+      <p class="state"> <%= element.active %> </p>
+      <br>
+      <br>
+  <%  }); %>
+  </div>
+  <div class="col">
+    <h5 class="rowhead">Deaths</h5>
+    <% result.statewise.forEach(function(element){ %>
+      <p class="state"><%= element.deaths %> </p>
+      <p class="deltade">(+ <%= element.deltadeaths %> )</p>
+      <br>
+  <%  }); %>
+  </div>
+</div>
