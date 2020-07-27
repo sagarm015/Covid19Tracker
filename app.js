@@ -10,10 +10,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 app.set("view engine","ejs");
-mongoose.connect("mongodb://localhost:27017/covid",{
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// mongoose.connect("mongodb://localhost:27017/covid",{
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 // https.get("https://api.covid19india.org/data.json", function(response) { //making a req to the given api
 //
@@ -44,6 +44,6 @@ app.get("/", function(req, res) {
   });
 
 });
-app.listen(3000, function() {
+app.listen(process.env.PORT, function() {
   console.log("hello");
 });
